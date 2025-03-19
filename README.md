@@ -1,31 +1,20 @@
-# Micropython Board Definitions for WeAct STM32H750VBT6
+# Micropython Board Definitions for STM32H750VBT6
 
-![board](docs/board.jpg)
+![board](pic/board.png)
 
 ## Board Specifications
 
-- STM32H750VBT6 480Mhz, 128KB ROM, 1MB RAM
+- STM32H750VBT6 480Mhz, ~~128KB ROM~~2MB flash, 1MB RAM
 - ARM Cortex M7 Architecture with FPU floating point unit, - complete DSP instruction and memory protection unit MPU
-- 8 MB SPI chip (for storage)
-- 8 MB QSPI memory (for program/flash)
+- 2 MB SPI chip (for storage)
 - Gold-plated, 4 layer PCB, RoHS process
 - User, BOOT0/DFU & reset buttons
 - USB C interface, Micro SD card,  3 buttons, DCMI camera - interface, with 1.5V and 2.8V power supply
 - Unofficial Support for OpenMV4 development
-- [GitHub Repository](https://github.com/WeActTC/MiniSTM32H7xx)
 
-### LCD
+### Since STM32H750 has 'FREE' and HUGE 2MB FLASH istead of 128K, we can just flash the whole firmware into internal flash. 
 
-The included LCD has the part number: LH096NT-IF09 made by [ShineWorld Innovations](https://www.swicn.com/product-by-category/6).
-
-It is supposed to be compatible to ST7735 LCDs. For which a [Micropython library](https://github.com/boochow/MicroPython-ST7735) exists.
-
-### Camera
-
-Either OV2640 or OV7725.
-
-[OV2640 Micropython library for the ESP8266](https://github.com/namato/micropython-ov2640)
-
+### the definition of this H750 board with CAN & Ethernet is based on https://github.com/ikoesters/WEACT_H750VBT6.
 ## Supported Features
 
 Features and correct Pin assignments are WIP - I combined them from [mcauser](https://github.com/mcauser/MCUDEV_DEVEBOX_H7XX_M) and [Mythologyli](https://github.com/Mythologyli/MicroPython-MCUDev-DevEBox-STM32H743) and have adjusted for the obvious changes, I will test the other features as I need them. Buses should work too.
@@ -33,7 +22,7 @@ Features and correct Pin assignments are WIP - I combined them from [mcauser](ht
 So far these things are verified to work:
 
 - [x] SD Card
-- [x] User LED (LED1, Blue, Pin E3)
+- [x] User LED (RED)
 
 ## Build the firmware
 
@@ -68,6 +57,7 @@ Once the upload is complete, disconnect and reconnect USB.
 
 - [mcauser/MCUDEV_DEVEBOX_H7XX_M](https://github.com/mcauser/MCUDEV_DEVEBOX_H7XX_M)
 - [Mythologyli/MicroPython-MCUDev-DevEBox-STM32H743](https://github.com/Mythologyli/MicroPython-MCUDev-DevEBox-STM32H743)
+- [ikoesters/WEACT_H750VBT6](https://github.com/ikoesters/WEACT_H750VBT6)
 
 ## License
 
