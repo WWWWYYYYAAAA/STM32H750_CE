@@ -1,6 +1,6 @@
 # Micropython Board Definitions for STM32H750VBT6
 
-![board](pic/board.jpg)
+![board](./pic/board.jpg)
 
 ## Board Specifications
 
