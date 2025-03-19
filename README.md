@@ -41,20 +41,25 @@ Clone the board definitions to your [MicroPython](https://github.com/micropython
 
 ```bash
 cd micropython/ports/stm32/boards
-git clone https://github.com/ikoesters/WEACT_H750VBT6
+git clone https://github.com/WWWWYYYYAAAA/STM32H750_CE.git
 
 cd ..
-make BOARD=/WEACT_H750VBT6
+make BOARD=/STM32H750_CE
 ```
 
 ## Flashing via DFU
 
 This board can be flashed using DFU. To put the board in DFU mode, disconnect
 USB, press and hold the B0 button and reconnect USB then release B0.
-After installing dfu-util, go the the build folder (`ports/stm32/boards/build-WEACT_H750VBT6`) and type:
+After installing dfu-util, go the the build folder (`ports/stm32/boards/build-STM32H750_CE`) and type:
 
 ```bash
-dfu-util -a 0 -D firmware.dfu
+sudo dfu-util -a 0 -D firmware.dfu
+```
+or
+
+```
+micropython/ports/stm32/boards/STMH750_CE$ sudo make BOARD=/STM32H750_CE -j
 ```
 
 Once the upload is complete, disconnect and reconnect USB.
