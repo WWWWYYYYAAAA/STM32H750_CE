@@ -14,7 +14,7 @@
 
 ### Since STM32H750 has 'FREE' and HUGE 2MB FLASH istead of 128K, we can just flash the whole firmware into internal flash. 
 
-### the definition of this H750 board with CAN & Ethernet is based on https://github.com/ikoesters/WEACT_H750VBT6.
+### The configuration of this H750 board with CAN & Ethernet is based on https://github.com/ikoesters/WEACT_H750VBT6.
 ## Supported Features
 
 Features and correct Pin assignments are WIP - I combined them from [mcauser](https://github.com/mcauser/MCUDEV_DEVEBOX_H7XX_M) and [Mythologyli](https://github.com/Mythologyli/MicroPython-MCUDev-DevEBox-STM32H743) and have adjusted for the obvious changes, I will test the other features as I need them. Buses should work too.
