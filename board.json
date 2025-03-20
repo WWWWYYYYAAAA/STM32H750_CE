@@ -6,9 +6,9 @@
     "features": [],
     "images": [],
     "mcu": "STM32H750VBT6",
-    "product": "WEACT STM32H750",
+    "product": "STM32H750",
     "thumbnail": "",
     "url": "https://github.com/WeActStudio",
-    "vendor": "WEACT"
+    "vendor": "_"
 }
  
